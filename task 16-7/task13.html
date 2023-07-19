@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   function showFirstAndLast(arr) {
+  // Create a new array to store the first and last characters of each string
+  const firstAndLastArray = [];
+
+  // Loop through the input array and process each string
+  for (let i = 0; i < arr.length; i++) {
+    const currentString = arr[i];
+    
+    // Extract the first and last characters of the current string
+    const firstChar = currentString.charAt(0);
+    const lastChar = currentString.charAt(currentString.length - 1);
+
+    // Concatenate the first and last characters and add to the new array
+    firstAndLastArray.push(firstChar + lastChar);
+  }
+
+  return firstAndLastArray;
+}
+
+// Test Case 1
+const testCase1 = showFirstAndLast(['colt', 'matt', 'tim', 'udemy']);
+console.log("Test Case 1:", testCase1); // Output: ["ct", "mt", "tm", "uy"]
+
+// Test Case 2
+const testCase2 = showFirstAndLast(['hi', 'goodbye', 'smile']);
+console.log("Test Case 2:", testCase2); // Output: ['hi', 'ge', 'se']
+ 
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+  // نهاية ال 10 taskat mapping: 
+
+  function extractFullName(arr) {
+  return arr.map(obj => `${obj.first} ${obj.last}`);
+}
+
+// Test Case
+console.log(extractFullName([
+  { first: 'Elie', last: 'Schoppik' },
+  { first: 'Tim', last: 'Garcia' },
+  { first: 'Matt', last: 'Lane' },
+  { first: 'Colt', last: 'Steele' }
+]));
+// Output: ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
+  
+</script>
+</html>

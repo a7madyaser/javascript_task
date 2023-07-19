@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+//الحصول_على_طول_السلسلة_بالبايت
+
+
+function getByteLength(str) {
+  let totalBytes = 0;
+  for (let i = 0; i < str.length; i++) {
+    const charCode = str.charCodeAt(i);
+    if (charCode <= 0x7f) {
+      totalBytes += 1; // ASCII characters (0-127) occupy 1 byte
+    } else if (charCode <= 0x7ff) {
+      totalBytes += 2; // Characters in the range 128-2047 occupy 2 bytes
+    } else if (charCode <= 0xffff) {
+      totalBytes += 3; // Characters in the range 2048-65535 occupy 3 bytes
+    } else {
+      totalBytes += 4; // Characters above 65535 (outside the BMP) occupy 4 bytes
+    }
+  }
+  return totalBytes;
+}
+
+// Test the function
+const inputString = "Hello, 世界!";
+const byteLength = getByteLength(inputString);
+console.log(`The length of the string in bytes is: ${byteLength}`);
+ 
+   
+</script>
+</html>

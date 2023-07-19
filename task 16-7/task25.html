@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    //العثور_على_القيمة_الدنيا_والعُليا_باستخدام_قاعدة_المقارنة
+
+
+    function findMinMaxWithRule(array, comparingRule) {
+  if (array.length === 0) {
+    return null;
+  }
+
+  let min = array[0];
+  let max = array[0];
+
+  for (let i = 1; i < array.length; i++) {
+    const currentElement = array[i];
+    if (comparingRule(currentElement, min) < 0) {
+      min = currentElement;
+    }
+    if (comparingRule(currentElement, max) > 0) {
+      max = currentElement;
+    }
+  }
+
+  return { min, max };
+}
+
+// Test the function
+const numbersArray = [5, 12, 3, 8, 1];
+const ruleFunction = (a, b) => a - b; // Use simple subtraction for comparison
+
+const result = findMinMaxWithRule(numbersArray, ruleFunction);
+console.log(result);
+// Output: { min: 1, max: 12 }
+
+
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function namesOnly(arr) {
+  return arr.map(person => person.name);
+}
+
+// Test Case
+console.log(namesOnly([
+  {
+    name: "Ahmad",
+    age: 80
+  },
+  {
+    name: "Yaser",
+    age: 2
+  },
+  {
+    name: "Omar",
+    age: 5
+  },
+  {
+    name: "Atrf",
+    age: 16
+  },
+  {
+    name: "Amajd",
+    age: 100
+  }
+]));
+// Output: ["Ahmad", "Yaser", "Omar", "Atef", "Amajd"]
+
+</script>
+</html>

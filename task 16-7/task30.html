@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// توسيع_كود_اللون 
+
+
+    function extendColorCode(colorCode3) {
+  const colorCode6 = colorCode3.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (_, r, g, b) => {
+    return `#${r}${r}${g}${g}${b}${b}`;
+  });
+  return colorCode6;
+}
+
+// Test the function
+const colorCode3Digit = "#123";
+const colorCode6Digit = extendColorCode(colorCode3Digit);
+console.log(colorCode6Digit); // Output: "#112233"
+
+
+</script>
+</html>

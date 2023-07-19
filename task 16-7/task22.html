@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //إزالة_الأحرف_غير_القابلة_للطباعة
+    
+    function removeNonPrintableCharacters(inputString) {
+  // Use regular expression to match non-printable ASCII characters (0 to 31 and 127) and remove them
+  const printableCharactersRegex = /[\x00-\x1F\x7F]/g;
+  return inputString.replace(printableCharactersRegex, '');
+}
+
+// Test the function
+const inputString = "Hello,\n\t\tWorld!\u0007";
+const cleanedString = removeNonPrintableCharacters(inputString);
+console.log(cleanedString); // Output: "Hello,World!"
+
+
+</script>
+</html>

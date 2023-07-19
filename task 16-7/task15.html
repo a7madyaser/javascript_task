@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+  // نهاية ال 5 taskat foreach tasks:
+  
+    function vowelCount(str) {
+  // Convert the input string to lowercase for case-insensitivity
+  str = str.toLowerCase();
+
+  // Create an object to store the vowel count
+  const vowelCounts = {};
+
+  // Define the vowels
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  // Loop through the string and count the occurrences of each vowel
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      // If the character is a vowel, increase the count or set to 1 if not exist
+      vowelCounts[char] = (vowelCounts[char] || 0) + 1;
+    }
+  }
+
+  return vowelCounts;
+}
+
+// Test Cases
+console.log(vowelCount('Elie')); // Output: {e: 2, i: 1}
+console.log(vowelCount('Tim')); // Output: {i: 1}
+console.log(vowelCount('Matt')); // Output: {a: 1}
+console.log(vowelCount('hmmm')); // Output: {}
+console.log(vowelCount('I Am awesome and so are you')); // Output: {i: 1, a: 4, e: 3, o: 3, u: 1}
+
+</script>
+</html>

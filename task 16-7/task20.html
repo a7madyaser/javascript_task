@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //  Es6 : 10 بداية تاسكات ال الاخياريات 
+    //استخراج_القيم_من_الفهارس
+    function extractValuesAtIndexes(arr, indexes) {
+  let extractedValues = [];
+  for (let i = 0; i < indexes.length; i++) {
+    const index = indexes[i];
+    if (index >= 0 && index < arr.length) {
+      extractedValues.push(arr[index]);
+    } else {
+      extractedValues.push(undefined); // Add undefined for invalid indexes
+    }
+  }
+  return extractedValues;
+}
+
+// Test the function
+const sampleArray = [10, 20, 30, 40, 50];
+const sampleIndexes = [0, 2, 4];
+const extractedValues = extractValuesAtIndexes(sampleArray, sampleIndexes);
+console.log(extractedValues); // Output: [10, 30, 50]
+
+</script>
+</html>

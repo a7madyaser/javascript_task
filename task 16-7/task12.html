@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function onlyEvenValues(arr) {
+  // Create a new array to store the even values
+  const evenArray = [];
+
+  // Loop through the input array and filter out the even values
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evenArray.push(arr[i]);
+    }
+  }
+
+  return evenArray;
+}
+
+// Test Case 1
+const testCase1 = onlyEvenValues([1, 2, 3]);
+console.log("Test Case 1:", testCase1); // Output: [2]
+
+// Test Case 2
+const testCase2 = onlyEvenValues([5, 1, 2, 3, 10]);
+console.log("Test Case 2:", testCase2); // Output: [2, 10]
+
+</script>
+</html>

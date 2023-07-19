@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    //نهاية تاسكات ال array
+
+
+    function firstOfArray(arr) {
+    if (Array.isArray(arr) && arr.length > 0) {
+      return arr[0];
+    } else {
+      return undefined; // Return undefined if the array is empty or not an array
+    }
+  }
+console.log(firstOfArray([1, 4, 5])); // Output: 1
+console.log(firstOfArray(["t", "u", "g", "x"])); // Output: "t"
+  
+</script>
+</html>

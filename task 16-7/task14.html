@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+</body>
+<script>
+
+   function addKeyAndValue(arr, key, value) {
+  // Loop through the array of objects
+  for (let i = 0; i < arr.length; i++) {
+    // Add the new key-value pair to each object
+    arr[i][key] = value;
+  }
+
+  return arr;
+}
+
+// Test Case
+const inputArray = [{ name: 'Elie' }, { name: 'Tim' }, { name: 'Matt' }, { name: 'Colt' }];
+const result = addKeyAndValue(inputArray, 'title', 'instructor');
+console.log(result);
+
+</script>
+</html>

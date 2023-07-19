@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+   //استبدال_أسماء_مفاتيح_الكائن 
+
+
+   function replaceObjectKeys(object, keyMap) {
+  const updatedObject = {};
+
+  for (const oldKey in object) {
+    if (keyMap.hasOwnProperty(oldKey)) {
+      const newKey = keyMap[oldKey];
+      updatedObject[newKey] = object[oldKey];
+    } else {
+      updatedObject[oldKey] = object[oldKey];
+    }
+  }
+
+  return updatedObject;
+}
+
+// Test the function
+const sampleObject = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30,
+};
+
+const keyMap = {
+  firstName: 'first',
+  lastName: 'last',
+};
+
+const updatedObject = replaceObjectKeys(sampleObject, keyMap);
+console.log(updatedObject);
+// Output: { first: 'John', last: 'Doe', age: 30 }
+
+
+</script>
+</html>
